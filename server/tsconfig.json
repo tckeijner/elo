@@ -26,8 +26,9 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.js",
-    "src/**/*.json"
-, "src/database/knexfile.ts"  ],
+    "src/**/*.json", 
+    "src/database/knexfile.ts"  
+  ],
   "exclude": [
     "node_modules",
     "<node_internals>/**",
