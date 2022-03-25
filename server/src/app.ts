@@ -1,11 +1,19 @@
-import express from 'express'
-const app = express()
-const port = 3000
+import express from 'express';
+import bodyParser from 'body-parser';
+import routes from './routes/index'
+import cors from 'cors';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const port = 4000;
+
+//Create express app
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+// Use custom routes
+app.use('/', routes);
 
 app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
-})
+  console.log('Now listening on port', port);
+});
+
