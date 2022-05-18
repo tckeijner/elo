@@ -2,8 +2,7 @@ import express from 'express';
 import { authenticate, generateAuthenticationToken } from '../store';
 const login = express.Router();
 
-login.post('/', (req, res, next) => {
-  console.log('Email: ' + req.body.email);
+login.post('/', (req, res, _next) => {
   authenticate({ email: req.body.email, password: req.body.password })
     .then(async ({ success, id }) => {
       if (success) {

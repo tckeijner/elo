@@ -13,4 +13,5 @@ const config: Knex.Config = {
   }
 };
 
-export default config;
+/* knex needs to be called with the config file as an argument */
+module.exports = require('knex')(config);

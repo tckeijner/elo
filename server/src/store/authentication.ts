@@ -1,7 +1,6 @@
-import knex from 'knex';
+const knex = require('../database/knexfile');
 
 export async function authenticate({ email, password }) {
-  console.log(`Authenticating user ${email}`);
   const [user] = await knex('user')
     .where({ email });
   if (!user)

@@ -10,7 +10,7 @@ export class AuthenticationService {
   baseUrl = 'http://localhost:4000';
   headers: HttpHeaders = new HttpHeaders({
     Accept: 'application/json',
-    'Content-Type': 'applicatiohn/json'
+    'Content-Type': 'application/json'
   })
 
   constructor(private http: HttpClient) { }
